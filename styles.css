@@ -107,6 +107,7 @@ section {
 .grid .card {
     border:  1px solid var(--white);
     padding: 10px;
+    margin: 10px;
 }
 
 .card-img {
