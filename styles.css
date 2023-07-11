@@ -1,0 +1,175 @@
+:root {
+    --gray: rgb(28, 26, 26);
+    --primary: blue;
+    --secondary: red;
+    --white: white;
+}
+
+
+* {
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    background: var(--gray);
+    padding: 20px;
+    color: var(--white);
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+    padding: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+header#header {
+    padding: 20px;
+    align-items: center;
+}
+
+#header .logo {
+    background: -webkit-linear-gradient(var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul li {
+    display: inline;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+header ul li a:hover, header ul li a:active, footer a:hover {
+    color: var(--secondary);
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+section {
+    padding: 40px;
+}
+.profile article, .profile .profile-img {
+    flex: 1;
+}
+
+.profile {
+    font-size: 1.3rem;
+    line-height: 1.3;
+}
+
+.profile-img img{
+    margin: 8rem auto;
+    display: block;
+    padding: 3rem;
+    border-right: 1px solid var(--white);
+    border-bottom: 1px solid var(--white);
+    box-shadow: 0 0 10px var(--primary);
+}
+
+.secondary {
+    color: var(--secondary);
+}
+.primary {
+    color: var(--primary);
+}
+
+.technologies ul {
+    padding: 1rem;
+    list-style: square;
+}
+
+.center {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.projects {
+    font-size: 1.7rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+}
+
+.grid .card {
+    border:  1px solid var(--white);
+    padding: 10px;
+}
+
+.card-img {
+    display: block;
+    width: 100%;
+    border: 1px solid var(--whitevar(--white));
+    border-radius: 50%;
+}
+
+.card a {
+    background: var(--primary);
+}
+
+.back-to-top {
+    font-size: 2rem;
+    text-align: end;
+}
+
+.back-to-top .spin {
+    animation: bounce 2s infinite ease-in-out;
+}
+
+footer {
+    font-size: 1.3rem;
+}
+
+.contact:hover .fa-whatsapp {
+    animation: roll 2s infinite ease-in-out;
+}
+
+@keyframes roll {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounce {
+    from {
+        font-weight: lighter;
+        color: var(--secondary);
+    }
+    to {
+        font-weight: bolder;
+        color: var(--primary);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .flex, .grid{
+        display: block;
+    }
+    header, .copyright {
+        text-align: center;
+    }
+    #header nav, header .socials {
+        margin: 1.5rem;
+    }
+    .profile-img {
+        width: 300px;
+        height: 300px;
+    }
+    
+}
