@@ -30,6 +30,7 @@ ul {
 header#header {
     padding: 20px;
     align-items: center;
+    text-align: center;
 }
 
 #header .logo {
@@ -45,7 +46,8 @@ header#header {
 }
 
 header ul li {
-    display: inline;
+    display: inline-block;
+    margin: 10px;
     text-align: center;
     font-size: 1.2rem;
 }
